@@ -1,0 +1,75 @@
+/* The hero image */
+#welcomeBanner {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.3);
+    background-image: url("../images/mountains/random_mountain1.jpg");
+    /* Set a specific height */
+    /* height: 100%; */
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    height: 32rem;
+    max-width: 100vw;
+}
+
+#welcomeMessage {
+    padding: 1rem 1.3rem;
+    text-align: center;
+    /* color: #000000; */
+    color: #CEF0D4;
+    font-family: 'Rouge Script', cursive;
+    font-size: 130px;
+    font-weight: normal;
+    line-height: 148px;
+    margin: 0 0 50px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #082b34;
+}
+
+.button-explore {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-position: center center;
+}
+
+.button-explore:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+.button-explore:active {
+    transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    .button-explore {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
