@@ -6,10 +6,6 @@ let theSampleUL = document.querySelector("#locations")
 let parkTypeUL = document.querySelector("#partTypes")
 let parksUl = document.querySelector("#parks")
 
-
-
-
-
 theSampleButton.addEventListener("click", function(event){
     console.log(locationsArray)
     console.log(nationalParksArray)
