@@ -1,35 +1,65 @@
 //this file has locationsArray, nationalParksArray, and parkTypesArray available to it because 
 //we included load_national_parks_data.js above it in the html file 
 
-let theSampleButton = document.querySelector("#theDemoButton")
-let theSampleUL = document.querySelector("#locations")
-let parkTypeUL = document.querySelector("#partTypes")
-let parksUl = document.querySelector("#parks")
+//getting the dropdown list into the JS file for us to work with
+let searchTypeDDL = document.querySelector("#searchTypeDDL");
 
-theSampleButton.addEventListener("click", function(event){
-    console.log(locationsArray)
-    console.log(nationalParksArray)
-    console.log(parkTypesArray)
+//get the locations dropdown so we can work with it
+let locationsDDL = document.querySelector("#locations");
 
+//get the locations dropdown so we can work with it
+let typesDDL = document.querySelector("#types");
 
-    locationsArray.forEach((location) => {
-        theSampleUL.innerHTML += `<li>${location}</li>`
-    })
+searchTypeDDL.addEventListener("change", function(event){
 
-    parkTypesArray.forEach((parkType) => {
-        parkTypeUL.innerHTML += `<li>${parkType}</li>`
-    })
+    //check which search type
 
-    nationalParksArray.forEach((park) => {
-        parksUl.innerHTML += `<li>${park.LocationName}</li>`
-    })
+    //if search type is location then show locations dropdown
 
-    theSampleUL.classList.remove("d-none")
+    //if search type is type then show types dropdown
 
-    parkTypeUL.classList.remove("d-none")
+    //hide all the dropdowns and then check which is supposed to show below
+    locationsDDL.classList.add("d-none")
+    typesDDL.classList.add("d-none")
 
-    parksUl.classList.remove("d-none")
+    if(event.target.value === "location"){
+        generateLocationsDDLOptions();
+        locationsDDL.classList.remove("d-none")
+        typesDDL.classList.add("d-none")
+    }
 
-
+    if(event.target.value === "type"){
+        generateTypesDDLOptions()
+        typesDDL.classList.remove("d-none")
+        locationsDDL.classList.add("d-none")
+    }
 
 })
+
+locationsDDL.addEventListener("change", function(event){
+    alert(event.target.value)
+})
+
+function generateLocationsDDLOptions(){
+
+    locationsDDL.innerHTML = `<option value="">Choose A Location</option>`
+
+    locationsArray.forEach((location) => {
+        locationsDDL.innerHTML += `<option value="${location}">${location}</option>`
+    })
+
+}
+
+function generateTypesDDLOptions(){
+
+    parkTypesArray.forEach((partkType) => {
+        typesDDL.innerHTML += `<option value="${partkType}">${partkType}</option>`
+    })
+
+}
+
+
+
+
+
+
