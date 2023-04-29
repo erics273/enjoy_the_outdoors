@@ -9,6 +9,7 @@
     "ZipCode": 42748,
     "Phone": "(270) 358-3137",
     "Fax": "(270) 358-3874",
+    "Visit":"https://www.nps.gov/abli/index.htm",
     "Latitude": 37.535671,
     "Longitude": -85.7340637,
     "Location":{"coordinates": [-85.7340637,37.535671],"type":"Point"}
@@ -36,6 +37,7 @@
     "ZipCode": 2169,
     "Phone": "(617) 770-1175",
     "Fax": "(617) 472-7562",
+    "Visit": "https://www.nps.gov/adam/index.htm",
     "Latitude": 42.256412,
     "Longitude": -71.011167,
     "Location":{"coordinates": [-71.011167,42.256412],"type":"Point"}
